@@ -15,7 +15,6 @@
 }
 
 .image_logo {
-  padding-top: 70px;
   width: 500px;
   height: 500px;
 }
@@ -32,7 +31,7 @@
   -ms-flex-align: center;
   align-items: center;
   padding: 0;
-  margin: 5 0px 0 0 -10px;
+  margin: -20px 0 10px;
 }
 
 .rrss__instagram,.rrss__facebook,.rrss__twitter,.rrss__mail {
@@ -46,6 +45,25 @@
 
 .rrss__mail {
   padding-top: 5px;
+}
+
+.form__link {
+  margin-left: -2px;
+}
+
+.form__link,.mail__link {
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 20px 0 5px;
+  color: black;
+  opacity: 0.75;
+  cursor: pointer;
+}
+
+.mail__link {
+  margin-top: 5px;
+  padding-bottom: 40px;
 }
 
 /*# sourceMappingURL=main.css.map */
