@@ -6,13 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"
         />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <script src="https://kit.fontawesome.com/6cca7f9ca4.js" crossorigin="anonymous"></script>
         <!-- Aquí van las fuentes -->
         <link href="https://fonts.googleapis.com/css?family=Amiko:400,600,700|Montserrat:300,400,400i,500,500i,600,600i,700,700i,900|Rokkitt:200,300,500,600,700,900|Volkhov&display=swap"
         rel="stylesheet" />
         <!-- Aquí van los estilos -->
         <link rel="stylesheet" href="assets/css/main.css" />
-        <title>The rider sessions</title>
     </head>
     
     <body>
@@ -32,36 +30,50 @@
                 </div>
             </nav>
         </header>
-        <main class="main">
-            <section class="hero__section">
+        <main class="main_form">
+            <section class="contact__section">
                 <div class="central-container">
-                    <div class="hero__container">
-                         <h1 class="hero__title">Encuentros con profesionales de la música en directo y la producción en gira.         </h1> 
-                    </div>
-                </div>
-                </div>
-            </section>
-            <section class="about__section">
-                <div class="central-container">
-                    <aside class="about__container">
-                         <h2 class="about__title">Sobre The Rider Sessions</h2> 
-                        <p class="about__text">Referentes profesionales de la música en vivo charlaran con nosotros sobre
-                            su trabajo en giras nacionales e internacionales. Pondremos el foco en
-                            los secretos de la producción en ruta, una parte no tan conocida dentro
-                            del sector y desconocida para la gran mayoría del público. En un momento
-                            en el que las giras están paradas por fuerza mayor, juntamos nuestras ganas
-                            de ir de concierto para crear un espacio en el que compartir conocimiento
-                            antes de volver a los escenarios. Las charlas online se retransmiten en
-                            abierto para quien esté interesado en aprender cómo funciona un tour y
-                            tener una visión más amplia del sector ¿Qué aprenderemos hoy?</p>
+                    <aside class="contact__container">
+                         <h2 class="contact__title">Contacto</h2> 
+                        <div class="contact__text-container">
+                            <p class="contact__text">¿Quieres saber más? ¿Ponerte en contacto con nosotras? Rellena este formulario
+                                y estaremos encantadas de conocerte.</p> <small class="contact__small">Todos los campos marcados con <span class="form__asterisc">*</span> son obligatorios.</small> 
+                        </div>
                     </aside>
-                </div>
-            </section>
-            <section class="counter__section">
-                <div class="central-container">
-                    <aside class="counter__container">
-                        <p class="counter__text">AQUÍ VA EL CONTADOR</p>
-                    </aside>
+                    <section class="contact__form-container">
+                        <form action="https://formspree.io/info.ridersessions@gmail.com" method="POST"
+                        />
+                        <div class="contact__name">
+                            <label for="name">Nombre completo <span class="form__asterisc">*</span>
+
+                            </label>
+                            <input placeholder="Nombre..." class="contact__input-name" type="text"
+                            name="name" id="name" required>
+                        </div>
+                        <div class="contact__mailtelf">
+                            <div class="contact__mailtelf-mail">
+                                <label for="email">Email <span class="form__asterisc">*</span> 
+                                </label>
+                                <input value="nombre.apellidos@mail.com" class="contact___input-mail"
+                                type="email" name="email" id="email" required>
+                            </div>
+                            <div class="contact__mailtelf-telf">
+                                <label for="telephone">Teléfono</label>
+                                <input placeholder="Ej: 123456789" class="input-telf"
+                                type="number" name="telephone" id="telephone">
+                            </div>
+                        </div>
+                        <div class="contact__mensaje">
+                            <label for="mensaje">Mensaje <span class="form__asterisc">*</span> 
+                            </label>
+                            <textarea placeholder="¿Qué necesitas?" class="input-mensaje" type="text"
+                            name="mensaje" id="mensaje" rows="8" cols="20" required></textarea>
+                        </div>
+                        <div class="contact__button-container">
+                            <button class="contact__button">Enviar</button>
+                        </div>
+                        </form>
+                    </section>
                 </div>
             </section>
         </main>
