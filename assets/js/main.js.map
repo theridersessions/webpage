@@ -1,1 +1,1 @@
-{"version":3,"sources":["main.js"],"names":[],"mappings":"AAAA;AACA;AACA;AACA","file":"main.js","sourcesContent":["'use strict';\n\nconsole.log('>> Ready :)');\n"]}
+{"version":3,"sources":["main.js"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA","file":"main.js","sourcesContent":["\"use strict\";\n\nconst btnToggle = document.querySelector(\".toggle-btn\");\n\nbtnToggle.addEventListener(\"click\", function () {\n  let list = document.getElementById(\"sidebar\");\n  list.classList.toggle(\"active\");\n});\n"]}
