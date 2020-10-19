@@ -275,56 +275,86 @@
 }
 
 .header {
-  position: fixed;
   width: 100vw;
   z-index: 3;
-  top: 0;
-  left: 0;
   text-align: center;
   text-transform: uppercase;
-  background-color: white;
   font-weight: 500;
-}
-
-.logo__the_rider_sessions {
-  width: 40%;
-  cursor: pointer;
-}
-
-.header-nav__container {
-  background-color: rgba(48, 59, 163, 0.9);
-  opacity: 0.9;
-  padding: 21px 0 0;
-  height: 14px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.header-nav-ul {
-  -webkit-transition: -webkit-transform ease 0.8s;
-  transition: -webkit-transform ease 0.8s;
-  transition: transform ease 0.8s;
-  transition: transform ease 0.8s, -webkit-transform ease 0.8s;
-  margin: 0 auto;
-  padding: 0;
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: left;
+  -ms-flex-pack: left;
+  justify-content: left;
+  -webkit-box-shadow: 0 7px 15px 0 #008c4c15;
+  box-shadow: 0 7px 15px 0 #008c4c15;
+}
+
+.header-nav {
+  position: fixed;
+  right: -170px;
+  top: 0;
+  width: 170px;
+  height: 40vh;
+  background-color: rgba(48, 59, 163, 0.9);
+  -webkit-transition: all 500ms linear;
+  transition: all 500ms linear;
+  color: white;
+}
+
+.header-nav.active {
+  right: 0;
+}
+
+.link-logo__index {
+  margin-left: -5px;
+  padding-top: 2px;
+  width: 30%;
+}
+
+.logo__the_rider_sessions {
+  width: 45%;
+  cursor: pointer;
+}
+
+.toggle-btn {
+  position: absolute;
+  top: 10px;
+  right: 190px;
+  cursor: pointer;
+  color: #303ba3;
+  border: 2px solid rgba(48, 59, 163, 0.9);
+  border-radius: 100%;
+}
+
+.hamburger-menu {
+  display: block;
+  width: 15px;
+  text-align: center;
+  font-size: 17px;
+  padding: 2px 6px 3px;
+}
+
+.hamburger-menu:hover {
+  color: orange;
+}
+
+.header-nav-ul {
   font-size: 12px;
 }
 
 .header-nav-li {
-  border-right: solid 1.5px orange;
-  margin-bottom: 21px;
-  padding: 10px 0;
+  list-style: none;
+  color: orange;
+  text-align: center;
+  padding: 50px 10px;
 }
 
 .header-nav-li:last-child {
@@ -455,13 +485,15 @@
 }
 
 .main,.main__biography,.main_form {
-  margin-top: 80%;
-  padding: 10px 0 0;
+  padding: 20px 0;
 }
 
-.main__sessions {
-  margin-top: 158px;
-  padding: 0;
+.main__biography {
+  margin-top: -40px;
+}
+
+.contact__container {
+  padding: 0 40px;
 }
 
 .contact__title {
@@ -510,6 +542,13 @@ input {
   margin: 0 auto;
 }
 
+@media all and (min-width: 380px) {
+  .toggle-btn {
+    top: 17px;
+    right: 210px;
+  }
+}
+
 @media all and (min-width: 480px) {
   .hero__title {
     font-size: 37px;
@@ -518,16 +557,21 @@ input {
   }
 }
 
-@media all and (min-width: 596px) {
-  .main,.main__biography,.main_form {
-    margin-top: 28%;
-    padding: 10px 0 0;
+@media all and (min-width: 500px) {
+  .header {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 }
 
 @media all and (min-width: 600px) {
   .logo__the_rider_sessions {
-    width: 20%;
+    width: 30%;
+  }
+
+  .link-logo__index {
+    margin-left: -40px;
   }
 }
 
@@ -642,32 +686,69 @@ input {
     margin-left: -20px;
   }
 
+  .header {
+    width: 100vw;
+  }
+
+  .header-nav {
+    position: static;
+    width: 80vw;
+    height: 8vh;
+    background-color: rgba(48, 59, 163, 0);
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .link-logo__index {
+    margin-left: 0px;
+  }
+
+  .logo__the_rider_sessions {
+    width: 40%;
+  }
+
+  .toggle-btn,.hamburger-menu {
+    display: none;
+  }
+
   .header-nav__container {
-    background-color: rgba(48, 59, 163, 0.9);
-    opacity: 0.9;
-    padding: 21px 0 0;
-    height: 14px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    width: 924px;
+    padding: 0 85px;
+    width: 100vw;
     margin: 0 auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 
   .header-nav-ul {
+    -webkit-transition: -webkit-transform ease 0.8s;
+    transition: -webkit-transform ease 0.8s;
+    transition: transform ease 0.8s;
+    transition: transform ease 0.8s, -webkit-transform ease 0.8s;
+    margin: 0 auto;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     font-size: 14px;
   }
 
   .header-nav-li {
-    margin-bottom: 21px;
-    padding: 9px 0;
+    margin-bottom: 31px;
+    padding: 25px 0 25px;
   }
 
   .header-nav-link {
-    padding: 0 90px;
+    padding: 0 50px;
+    color: rgba(48, 59, 163, 0.9);
+    font-weight: 700;
   }
 
   .header-nav-li:first-child .header-nav-link {
@@ -714,11 +795,6 @@ input {
     font-size: 13px;
     line-height: 18px;
   }
-
-  .main,.main__biography,.main_form {
-    margin-top: 25%;
-    padding: 10px 0 0;
-  }
 }
 
 @media all and (min-width: 768px) {
@@ -726,12 +802,17 @@ input {
     margin: 0 45px;
   }
 
-  .main__sessions {
-    margin-top: 22%;
+  .main {
+    margin-top: 0;
+    padding: 10px 0;
   }
 
-  .contact__container {
-    padding: 0 40px;
+  .main__biography {
+    margin-top: -20px;
+  }
+
+  .main_form {
+    margin-top: 20px;
   }
 }
 
@@ -739,18 +820,6 @@ input {
   .central-container {
     margin: 0 auto;
     width: 924px;
-  }
-
-  .main,.main__biography,.main_form {
-    margin-top: 24%;
-    padding: 10px 0 0;
-  }
-}
-
-@media all and (max-width: 595px) {
-  .main,.main__biography,.main_form {
-    margin-top: 48%;
-    padding: 10px 0 0;
   }
 }
 
